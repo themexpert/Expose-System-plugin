@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+	<name>System - Expose</name>
+	<author>ThemeXpert</author>
+	<creationDate>Nove 01, 2011</creationDate>
+	<copyright>(C) 2010 - 2011 ThemeXpert. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3</license>
+	<authorEmail>support@themexpert.com</authorEmail>
+	<authorUrl>http://www.themexpert.com</authorUrl>
+	<version>3.0</version>
+	<description>Expose System Plugin for Joomla 2.5</description>
+	<files>
+		<filename plugin="expose">expose.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>
