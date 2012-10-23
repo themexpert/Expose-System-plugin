@@ -23,10 +23,19 @@ class plgSystemExpose extends JPlugin{
 
     //load extended menu params
     public function onContentPrepareForm($form, $data){
+
         if ($form->getName()=='com_menus.item'){
 			JForm::addFormPath(JPATH_LIBRARIES.DS.'expose'.DS.'core'.DS.'menu');
 			$form->loadFile('params', false);
 		}
     }
+
+   /* public function onBeforeRender(){
+        jimport('expose.expose');
+
+        global $expose;
+
+        echo $expose->get('style');
+    }*/
 
 }
