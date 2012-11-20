@@ -7,7 +7,7 @@
 	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3</license>
 	<authorEmail>support@themexpert.com</authorEmail>
 	<authorUrl>http://www.themexpert.com</authorUrl>
-	<version>3.0</version>
+	<version>4.0</version>
 	<description>Expose System Plugin for Joomla 2.5</description>
 	<files>
 		<filename plugin="expose">expose.php</filename>

@@ -24,10 +24,32 @@ class plgSystemExpose extends JPlugin{
     //load extended menu params
     public function onContentPrepareForm($form, $data){
 
-        if ($form->getName()=='com_menus.item'){
-			JForm::addFormPath(JPATH_LIBRARIES.DS.'expose'.DS.'core'.DS.'menu');
-			$form->loadFile('params', false);
-		}
+        jimport('expose.expose');
+
+        global $expose;
+
+        if( JFactory::getApplication()->isAdmin() )
+        {
+            if ($form->getName() == 'com_menus.item'){
+                JForm::addFormPath( JPATH_LIBRARIES . '/expose/core/menu' );
+                $form->loadFile('params', false);
+            }
+
+            if($form->getName() == 'com_templates.style')
+            {
+                $xml_path = $expose->templatePath . '/options.xml';
+                if( file_exists($xml_path))
+                {
+                    JForm::addFormPath( $expose->templatePath );
+                    $form->loadFile('options', false);
+
+                    // Load Library language file
+                    $lang = JFactory::getLanguage();
+                    $lang->load('lib_expose', JPATH_SITE);
+                }
+            }
+        }
+
     }
 
    /* public function onBeforeRender(){
