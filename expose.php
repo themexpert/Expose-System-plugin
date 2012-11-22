@@ -37,16 +37,9 @@ class plgSystemExpose extends JPlugin{
 
             if($form->getName() == 'com_templates.style')
             {
-                $xml_path = $expose->templatePath . '/options.xml';
-                if( file_exists($xml_path))
-                {
-                    JForm::addFormPath( $expose->templatePath );
-                    $form->loadFile('options', false);
-
-                    // Load Library language file
-                    $lang = JFactory::getLanguage();
-                    $lang->load('lib_expose', JPATH_SITE);
-                }
+                // Load Library language file
+                $lang = JFactory::getLanguage();
+                $lang->load('lib_expose', JPATH_SITE);
             }
         }
 
