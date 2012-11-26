@@ -3,7 +3,7 @@
  * Expose system plugin
  *
  * @package     Expose
- * @version     4.0
+ * @version     4.1
  * @author      ThemeXpert http://www.themexpert.com
  * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
  * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
@@ -24,12 +24,12 @@ class plgSystemExpose extends JPlugin{
     //load extended menu params
     public function onContentPrepareForm($form, $data){
 
-        jimport('expose.expose');
-
-        global $expose;
-
         if( JFactory::getApplication()->isAdmin() )
         {
+            jimport('expose.expose');
+
+            global $expose;
+
             if ($form->getName() == 'com_menus.item'){
                 JForm::addFormPath( JPATH_LIBRARIES . '/expose/core/menu' );
                 $form->loadFile('params', false);
