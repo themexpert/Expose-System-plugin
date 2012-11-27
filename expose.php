@@ -26,10 +26,6 @@ class plgSystemExpose extends JPlugin{
 
         if( JFactory::getApplication()->isAdmin() )
         {
-            jimport('expose.expose');
-
-            global $expose;
-
             if ($form->getName() == 'com_menus.item'){
                 JForm::addFormPath( JPATH_LIBRARIES . '/expose/core/menu' );
                 $form->loadFile('params', false);
